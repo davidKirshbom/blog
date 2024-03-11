@@ -8,7 +8,11 @@
     "start": "env-cmd -f ./.env node  src/index.js",
     "dev": "env-cmd -f ./.env nodemon --inspect src/index.js",
     "dev:migrate": "env-cmd -f ./.env sequelize db:migrate",
-    "dev:migrate:undo": "env-cmd -f ./.env sequelize-cli db:migrate:undo"
+    "dev:migrate:create": "env-cmd -f ./.env sequelize migration:create ",
+    "dev:migrate:undo": "env-cmd -f ./.env sequelize-cli db:migrate:undo",
+    "dev:seed": "env-cmd -f ./.env sequelize-cli db:seed:all",
+    "dev:seed:generate": "env-cmd -f ./.env sequelize-cli seed:generate",
+    "dev:seed:undo": "env-cmd -f ./.env sequelize-cli db:seed:undo"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +25,7 @@
     "sequelize": "^6.37.1"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "env-cmd": "^10.1.0",
     "nodemon": "^3.1.0",
     "sequelize-cli": "^6.6.2"

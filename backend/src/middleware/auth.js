@@ -14,10 +14,16 @@ const auth = async (req, res, next) => {
   if (!userToken) {
     return res.status(401).send("Unauthorized");
   }
-  const tokenData = verifyToken(userToken);
-  if (!tokenData) {
+  let tokenData;
+  try {
+    tokenData = verifyToken(userToken);
+    if (!tokenData) {
+      return res.status(401).send("Unauthorized");
+    }
+  } catch (error) {
     return res.status(401).send("Unauthorized");
   }
+
   const user = await db.User.findByPk(tokenData.id);
 
   req.user = user;

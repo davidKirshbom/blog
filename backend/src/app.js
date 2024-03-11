@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors");
 const ApiError = require("./utils/ApiError");
-const authRoutes = require("./routes/auth");
-const postRoutes = require("./routes/post");
-const commentRoutes = require("./routes/comment");
+const authRouter = require("./routers/auth.router");
+const postRouter = require("./routers/post.router");
+const commentRouter = require("./routers/comment.router");
+const userRouter = require("./routers/user.router");
 const { errorConverter, errorHandler } = require("./middleware/error");
 const httpStatusCodes = require("./utils/httpsStauses");
 const db = require("./database/models");
@@ -15,9 +16,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use("/auth", authRoutes);
-app.use("/post", auth, postRoutes);
-app.use("/comment", auth, commentRoutes);
+app.use("/auth", authRouter);
+app.use("/post", auth, postRouter);
+app.use("/user", auth, userRouter);
+
+app.use("/comment", auth, commentRouter);
 
 app.use((req, res, next) => {
   next(new ApiError(httpStatusCodes.NOT_FOUND, "Not found"));
@@ -30,7 +33,7 @@ app.use((req, res, next) => {
 });
 
 db.sequelize
-  .sync({ alter: true })
+  .sync()
   .then(() => {
     console.log(
       "Connection to the database has been established successfully."

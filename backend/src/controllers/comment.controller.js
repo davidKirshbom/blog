@@ -3,11 +3,15 @@ const {
   editUserComment,
   deleteUserComment,
 } = require("../services/comment.service");
-
+const ApiError = require("../utils/ApiError");
+const httpsStatuses = require("../utils/httpsStauses");
 const createComment = async (req, res) => {
   const { content } = req.body;
   const postId = req.query.postId;
   const author = req.user;
+  if (!content || !content === "") {
+    throw new ApiError(httpsStatuses.BAD_REQUEST, "Content is required");
+  }
   const comment = await createPostComment(postId, {
     content,
     authorId: author.id,

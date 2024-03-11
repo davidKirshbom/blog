@@ -19,9 +19,16 @@ const verifyToken = (token) => {
 const comparePassword = async (password, hashedPassword) => {
   return await bcrypt.compare(password, hashedPassword);
 };
+const validatePassword = (password) => {
+  if (password.length < 6) {
+    throw new Error("Password must be at least 6 characters long");
+  }
+  return true;
+};
 module.exports = {
   hashPassword,
   generateToken,
   comparePassword,
   verifyToken,
+  validatePassword,
 };
