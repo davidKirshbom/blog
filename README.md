@@ -78,7 +78,7 @@ This project is a full-stack blog application built with a JavaScript backend an
     npm run dev:seed
    ```
 
-   all passwords in seeders are "password"
+   all passwords in seeders are "password".
 
 ## Usage
 
@@ -91,7 +91,8 @@ Start the backend server:
       npm run dev
       ```
 
-<!-- This will start the serverdf. (usually http://localhost:5173). -->
+This will start the backend server as default http://localhost:3000.
+If you decide to modify it, remember to update the baseUrl property in ./frontend/src/server/config.
 
 ### Frontend Usage
 
