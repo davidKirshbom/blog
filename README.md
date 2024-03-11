@@ -10,9 +10,6 @@ This project is a full-stack blog application built with a JavaScript backend an
 - [Usage](#usage)
   - [Backend](#backend-usage)
   - [Frontend](#frontend-usage)
-- [Development](#development)
-- [License](#license)
-- [Contributing](#contributing)
 
 ## Technologies
 
