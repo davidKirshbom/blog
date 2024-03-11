@@ -52,7 +52,7 @@ This project is a full-stack blog application built with a JavaScript backend an
 3. Install backend dependencies:
 
    ```bash
-   cd backend
+   cd ./backend
    npm install
    ```
 
@@ -68,6 +68,7 @@ This project is a full-stack blog application built with a JavaScript backend an
 6. Run the Sequelize migrations to create the necessary database tables:
 
    ```bash
+   cd ../backend
    npm run dev:migrate
    ```
 
