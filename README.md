@@ -78,16 +78,18 @@ This project is a full-stack blog application built with a JavaScript backend an
     npm run dev:seed
    ```
 
+   all passwords in seeders are "password"
+
 ## Usage
 
 ### Backend Usage
 
 Start the backend server:
 
-     ```bash
-     cd ./backend
-     npm run dev
-     ```
+      ```bash
+      cd ./backend
+      npm run dev
+      ```
 
 <!-- This will start the serverdf. (usually http://localhost:5173). -->
 
