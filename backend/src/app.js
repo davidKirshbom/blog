@@ -6,7 +6,7 @@ const postRouter = require("./routers/post.router");
 const commentRouter = require("./routers/comment.router");
 const userRouter = require("./routers/user.router");
 const { errorConverter, errorHandler } = require("./middleware/error");
-const httpStatusCodes = require("./utils/httpsStauses");
+const httpStatusCodes = require("./utils/httpStatusCodes");
 const db = require("./database/models");
 const auth = require("./middleware/auth");
 

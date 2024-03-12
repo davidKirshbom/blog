@@ -1,7 +1,7 @@
 const userService = require("../services/user.service.js");
 const ApiError = require("../utils/ApiError.js");
 const { generateToken, validatePassword } = require("../utils/auth.js");
-const httpStatusCodes = require("../utils/httpsStauses.js");
+const httpStatusCodes = require("../utils/httpStatusCodes.js");
 
 const createUser = async (req, res) => {
   const { password, username } = req.body;

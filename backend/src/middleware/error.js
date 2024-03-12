@@ -1,5 +1,5 @@
 const ApiError = require("../utils/ApiError");
-const httpStatusCodes = require("../utils/httpsStauses");
+const httpStatusCodes = require("../utils/httpStatusCodes");
 
 const errorConverter = (err, req, res, next) => {
   let error = err;

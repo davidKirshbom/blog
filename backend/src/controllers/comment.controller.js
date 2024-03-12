@@ -4,7 +4,7 @@ const {
   deleteUserComment,
 } = require("../services/comment.service");
 const ApiError = require("../utils/ApiError");
-const httpsStatuses = require("../utils/httpsStauses");
+const httpsStatuses = require("../utils/httpStatusCodes");
 const createComment = async (req, res) => {
   const { content } = req.body;
   const postId = req.query.postId;
