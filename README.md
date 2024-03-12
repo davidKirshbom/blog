@@ -1,4 +1,4 @@
-# Blog Project - MERN Stack with React (Vite) and MySQL
+# Blog Project
 
 This project is a full-stack blog application built with a JavaScript backend and a React frontend.
 
@@ -83,10 +83,10 @@ This project is a full-stack blog application built with a JavaScript backend an
 
 Start the backend server:
 
-      ```bash
+  ```bash
       cd ./backend
       npm run dev
-      ```
+  ```
 
 This will start the backend server as default http://localhost:3000.
 If you decide to modify it, remember to update the baseUrl property in ./frontend/src/server/config.
@@ -95,9 +95,9 @@ If you decide to modify it, remember to update the baseUrl property in ./fronten
 
 Start the frontend development server:
 
-     ```bash
+   ```bash
      cd ./frontend
      npm run dev
-     ```
+   ```
 
 This will open the application in your default browser (usually http://localhost:5173).
